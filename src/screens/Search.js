@@ -4,7 +4,7 @@ import { TextField } from 'react-native-material-textfield'
 import { Button, Icon } from 'react-native-elements';
 
 
-export default class Search extends Component {
+export class Search extends Component {
     state = {
         searchInput: '',
         isLoading: false
@@ -30,6 +30,8 @@ export default class Search extends Component {
                     <View style={{ padding: 30 }}>
                         <Text style={textStyle}>Search For A Movie!</Text>
                         <TextField
+                            fontSize={24}
+                            textColor={'blue'}
                             label='Search here...'
                             value={this.state.searchInput}
                             onChangeText={ (newText) => this.setState({ searchInput: newText }) }
